@@ -10,6 +10,8 @@ clean:
 dev: main.go test.go
 	go build -o main main.go test.go
 
+mod:
+	go mod tidy
 proto-hello:
 	tools/proto/bin/protoc -I=api/msg/pc -I=api/msg/hello  api/msg/hello/*.proto --gogo_out=plugins=grpc:api/pb/hello
 
