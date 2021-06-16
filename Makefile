@@ -1,14 +1,4 @@
-Apps = $(notdir $(wildcard ./*))
-User = $(shell echo $(USER))
-objects := $(wildcard *.go)
-all: clean 
-	go build -o test.exe $(objects)
-.PHONY: clean
-clean:
-	rm -f test.exe;echo ${Apps} ${User}
 
-dev: main.go test.go
-	go build -o main main.go test.go
 
 mod:
 	go mod tidy
