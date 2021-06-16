@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package pc;
+import "laptop.proto";
+import "filter_message.proto";
+
+message CreateLaptopRequest{
+  Laptop laptop=1;
+}
+message CreateLaptopResponse{
+  string id=1;
+}
+message SearchLaptopRequest{
+  Filter filter=1;
+}
+message SearchLaptopResponse{
+ Laptop laptop=1;
+}
+service CreateLaptopService{
+  rpc CreateLaptop(CreateLaptopRequest)returns(CreateLaptopResponse);
+  rpc SearchLaptop(SearchLaptopRequest)returns(stream SearchLaptopResponse);
+}
+
+

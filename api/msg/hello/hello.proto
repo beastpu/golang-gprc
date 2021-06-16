@@ -1,0 +1,40 @@
+//tools/proto/bin/protoc -I=cmd/test/msg cmd/test/msg/hello.proto --gogofaster_out=plugins=grpc:cmd/test/pb
+syntax = "proto3";
+
+package pb;
+
+
+service Greeter {
+
+    rpc SayHello (HelloRequest) returns (HelloReply) {}
+    rpc SayBye (ByeRequest) returns (ByeReply) {}
+    rpc GetInfo (Person) returns (ByeReply){}
+}
+
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloReply {
+    string message = 1;
+}
+message ByeRequest{
+    string info =1;
+}
+message ByeReply{
+    string data=1;
+}
+
+message Person {
+  string name = 1;
+  int32 id = 2;  // Unique ID number for this person.
+  string email = 3;
+
+  enum PhoneType {
+    PC = 0;
+    AND = 1;
+    IOS = 2;
+  }
+  PhoneType type = 4;
+}

@@ -1,0 +1,54 @@
+{
+ "id": "1",
+ "brand": "dell",
+ "name": "dell2",
+ "cpu": {
+  "brand": "mac",
+  "name": "mac pro",
+  "number_cores": 2,
+  "number_threads": 3,
+  "min_ghz": 1,
+  "max_ghz": 5
+ },
+ "ram": {
+  "value": "6159537481629026615",
+  "unit": "BIT"
+ },
+ "gpus": [
+  {
+   "brand": "microsoft",
+   "name": "win10",
+   "min_ghz": 2,
+   "max_ghz": 5,
+   "memory": {
+    "value": "6885191318393208153",
+    "unit": "MEGABYTE"
+   }
+  }
+ ],
+ "storage": [
+  {
+   "driver": "HDD",
+   "memory": {
+    "value": "9928963462516708728",
+    "unit": "KILOBYTE"
+   }
+  }
+ ],
+ "screen": {
+  "size_inch": 14.5,
+  "resolution": {
+   "width": 3482701702,
+   "height": 1769913674
+  },
+  "panel": "IPS",
+  "multitouch": false
+ },
+ "keyboard": {
+  "layout": "UNKNOWN"
+ },
+ "weight_kg": 100,
+ "price_usd": 100,
+ "release_year": 2018,
+ "updated_at": null
+}

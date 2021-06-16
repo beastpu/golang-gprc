@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package pc;
+
+message Keyboard{
+  enum Layout{
+    UNKNOWN=0;
+    l1=1;
+    l2=2;
+  }
+  Layout layout=1;
+}
